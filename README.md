@@ -1,0 +1,2 @@
+# Kedalion
+ Kedalion (Cedalion) — a character from ancient Greek mythology who served Hephaestus and assisted him in his craftsmanship. He also acted as a guide for the blind Orion, and according to etymology, his name is related to 'to take charge, to care for.' Who better than Kedalion can be equated with Nginx. This repository contains the main configuration files and execution scripts for deploying Nginx with support for static sites based on Jekyll.
