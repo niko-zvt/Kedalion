@@ -26,6 +26,7 @@ for((INDEX=1; INDEX <= $REPOS_COUNT; INDEX+=1));do
         shift 1
     else
         echo "Repo $((INDEX - 2)): $1"
+        REPO=$1
         # Clone repo
         git clone https://$PAT@github.com/$GIT_USER/$REPO.git
         shift 1
