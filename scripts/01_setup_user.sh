@@ -1,21 +1,8 @@
-#! /bin/bash
-
-# Create user
-
-# Use:          sudo ./01_setup_user.sh <user_name>
-# Example 1:    sudo ./01_setup_user.sh noname
-
-ME=`basename "$0"`
-USER_NAME=$1
-
-# Print hello
-echo "Script $ME started!"
-
 # Add user
-adduser $USER_NAME
+adduser niko
 
 # Add sudo rules
-usermod -aG sudo $USER_NAME
+usermod -aG sudo niko
 
 # Test
 # su - $USER_NAME
@@ -25,9 +12,11 @@ usermod -aG sudo $USER_NAME
 apt update
 apt install sudo -y
 apt install nmap -y
+apt install git -y
 
 # Check ports
 nmap -sT -O localhost
 nmap -sU localhost
+
 
 # Open http and https ports
