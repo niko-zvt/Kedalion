@@ -18,20 +18,20 @@ sudo nginx -t
 sudo systemctl reload nginx
 
 # Create folders
-sudo mkdir -p /var/www/zhivotenko.com/html
+sudo mkdir -p /var/www/example.com/html
 
 # Apply appropriate permissions
-sudo chown -R $USER:$USER /var/www/zhivotenko.com/html
+sudo chown -R $USER:$USER /var/www/example.com/html
 sudo chmod -R 755 /var/www
 
 # Copy files
-sudo cp -r ./site/. /var/www/zhivotenko.com/html/
+sudo cp -r ./site/. /var/www/example.com/html/
 
 # Copy site config
-sudo cp ./zhivotenko.com.conf /etc/nginx/sites-available/zhivotenko.com
+sudo cp ./example.com.conf /etc/nginx/sites-available/example.com
 
 # Enable site
-sudo ln -s /etc/nginx/sites-available/zhivotenko.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 
 # Test site config
 sudo nginx -t
